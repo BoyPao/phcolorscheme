@@ -1,6 +1,6 @@
 " License: GPL-3.0-or-later
 "
-" Vim color file - ph_style
+" Vim colorscheme file - phcs
 "
 " Copyright (c) 2021 Peng Hao <635945005@qq.com>
 
