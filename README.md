@@ -2,23 +2,23 @@
 A vim colorscheme
 
 # Installation
-- 1. You can download phcs manually
-```
-git clone git@github.com:BoyPao/phcolorscheme.git
-```
-
-- (1). Or you can download it by vim-plug
+phcs can be installed by following method
+- Install phcs by vim-plug (suggested)
 ```
 Plug 'BoyPao/phcolorscheme'
-```
 
-- 2. Put phcs into ~/.vim/colors/
 ```
+- Install phcs manually
+```
+git clone git@github.com:BoyPao/phcolorscheme.git
 cp phcs.vim ~/.vim/colors/
 ```
 
-- 3. Select phcs as colorscheme in your .vimrc
+
+# Enable phcs
+phcs can be enable by selecting phcs as colorscheme in .vimrc
 ```
 " Config colorscheme
 colorscheme phcs
 ```
+- **Note:** if you use vim-plug to install phcs, *colorscheme phcs* should be wrote behand vim-plug configurations
