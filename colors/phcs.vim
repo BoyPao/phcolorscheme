@@ -128,7 +128,7 @@ match WhitespaceEOL /\s\+$/
 "hi TabLine -- no settings --
 "hi clear -- no settings --
 
-function PHCSDebug()
+function! PHCSDebug()
 	echohl Normal						| echo printf("%5s %5s %70s", "DBG: ", "phcs:", "Normal")						| echohl None
 	echohl ColorColumn					| echo printf("%5s %5s %70s", "DBG: ", "phcs:", "ColorColumn")					| echohl None
 	echohl IncSearch					| echo printf("%5s %5s %70s", "DBG: ", "phcs:", "IncSearch")					| echohl None
