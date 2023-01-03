@@ -10,10 +10,9 @@ Plug 'BoyPao/phcolorscheme'
 ```
 - Install phcs manually
 ```
-git clone git@github.com:BoyPao/phcolorscheme.git
+git clone --depth=1 https://github.com/BoyPao/phcolorscheme.git
 cp phcs.vim ~/.vim/colors/
 ```
-
 
 # Enable phcs
 phcs can be enable by selecting phcs as colorscheme in .vimrc
