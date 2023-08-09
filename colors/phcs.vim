@@ -21,7 +21,7 @@ hi ColorColumn					guifg=NONE guibg=#2b2b2e guisp=#4b4d4d gui=NONE ctermfg=NONE 
 hi Cursor						guifg=#131414 guibg=#f5fafa guisp=#f5fafa gui=NONE ctermfg=233 ctermbg=195 cterm=NONE
 hi CursorIM						guifg=#131414 guibg=#f5fafa guisp=#f5fafa gui=NONE ctermfg=233 ctermbg=195 cterm=NONE
 "hi CursorColumn -- no settings --
-"hi CursorLine					guifg=NONE guibg=#1d1d1f guisp=#1d1d1f gui=NONE ctermfg=NONE ctermbg=234 cterm=NONE
+hi CursorLine					guifg=NONE guibg=#1d1d1f guisp=#1d1d1f gui=NONE ctermfg=NONE ctermbg=234 cterm=NONE
 hi Directory					guifg=#808bed guibg=NONE guisp=NONE gui=NONE ctermfg=105 ctermbg=NONE cterm=NONE
 hi DiffAdd						guifg=NONE guibg=#183608 guisp=#183608 gui=NONE ctermfg=NONE ctermbg=22 cterm=NONE
 hi DiffChange					guifg=NONE guibg=#101410 guisp=#101410 gui=NONE ctermfg=NONE ctermbg=233 cterm=NONE
