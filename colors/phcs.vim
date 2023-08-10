@@ -4,9 +4,19 @@
 "
 " Copyright (c) 2021 Peng Hao <635945005@qq.com>
 
+if !exists('g:phcsCursorLineUnderline')
+	let g:phcsCursorLineUnderline = 0
+endif
+
+if !exists('g:phcsPreResetOn')
+	let g:phcsPreResetOn = 1
+endif
+
 set background=dark
 if version > 580
-	hi clear
+	if g:phcsPreResetOn == 1
+		hi clear
+	endif
 	if exists("syntax_on")
 		syntax reset
 	endif
@@ -14,14 +24,15 @@ endif
 
 set t_Co=256
 let g:colors_name = "phcs"
-
 """""""""""""""""""""""""""""" highlight-groups """"""""""""""""""""""""""""""""
 hi ColorColumn					guifg=NONE guibg=#2b2b2e guisp=#4b4d4d gui=NONE ctermfg=NONE ctermbg=236 cterm=NONE
 "hi Conceal -- no settings --
 hi Cursor						guifg=#131414 guibg=#f5fafa guisp=#f5fafa gui=NONE ctermfg=233 ctermbg=195 cterm=NONE
 hi CursorIM						guifg=#131414 guibg=#f5fafa guisp=#f5fafa gui=NONE ctermfg=233 ctermbg=195 cterm=NONE
 "hi CursorColumn -- no settings --
-hi CursorLine					guifg=NONE guibg=#1d1d1f guisp=#1d1d1f gui=NONE ctermfg=NONE ctermbg=234 cterm=NONE
+if g:phcsCursorLineUnderline == 0
+	hi CursorLine					guifg=NONE guibg=#1d1d1f guisp=#1d1d1f gui=NONE ctermfg=NONE ctermbg=234 cterm=NONE
+endif
 hi Directory					guifg=#808bed guibg=NONE guisp=NONE gui=NONE ctermfg=105 ctermbg=NONE cterm=NONE
 hi DiffAdd						guifg=NONE guibg=#183608 guisp=#183608 gui=NONE ctermfg=NONE ctermbg=22 cterm=NONE
 hi DiffChange					guifg=NONE guibg=#101410 guisp=#101410 gui=NONE ctermfg=NONE ctermbg=233 cterm=NONE
@@ -133,7 +144,6 @@ hi doxygencomment				guifg=#2ea303 guibg=NONE guisp=NONE gui=NONE ctermfg=34 cte
 hi perlspecialstring			guifg=#c75b5b guibg=#000000 guisp=#000000 gui=NONE ctermfg=167 ctermbg=NONE cterm=NONE
 hi perlspecialmatch				guifg=#7097e0 guibg=#383838 guisp=#7097e0 gui=NONE ctermfg=68 ctermbg=237 cterm=NONE
 
-match WhitespaceEOL /\s\+$/
 "hi CTagsMember -- no settings --
 "hi CTagsGlobalConstant -- no settings --
 "hi CTagsImport -- no settings --
@@ -144,6 +154,13 @@ match WhitespaceEOL /\s\+$/
 "hi DefinedName -- no settings --
 "hi LocalVariable -- no settings --
 "hi clear -- no settings --
+
+autocmd VimEnter /* call <SID>PHCSApplyEOLMatch()
+autocmd WinNew /* call <SID>PHCSApplyEOLMatch()
+
+function! <SID>PHCSApplyEOLMatch()
+	exe 'windo match WhitespaceEOL /\s\+$/'
+endfunction
 
 function! PHCSDebug()
 	echohl ColorColumn					| echo printf("%5s %5s %40s %30s", "DBG: ", "phcs:", "ColorColumn"					, "CC")								| echohl None
