@@ -159,7 +159,9 @@ autocmd VimEnter /* call <SID>PHCSApplyEOLMatch()
 autocmd WinNew /* call <SID>PHCSApplyEOLMatch()
 
 function! <SID>PHCSApplyEOLMatch()
+	let nr = winnr()
 	exe 'windo match WhitespaceEOL /\s\+$/'
+	exe nr . 'wincmd w'
 endfunction
 
 function! PHCSDebug()
