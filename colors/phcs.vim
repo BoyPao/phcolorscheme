@@ -155,10 +155,12 @@ hi perlspecialmatch				guifg=#7097e0 guibg=#383838 guisp=#7097e0 gui=NONE ctermf
 "hi LocalVariable -- no settings --
 "hi clear -- no settings --
 
-autocmd VimEnter /* call <SID>PHCSApplyEOLMatch()
-autocmd WinNew /* call <SID>PHCSApplyEOLMatch()
+autocmd VimEnter /* call s:PHCSApplyEOLMatch()
+if version > 800
+	autocmd WinNew /* call s:PHCSApplyEOLMatch()
+endif
 
-function! <SID>PHCSApplyEOLMatch()
+function! s:PHCSApplyEOLMatch()
 	let nr = winnr()
 	exe 'windo match WhitespaceEOL /\s\+$/'
 	exe nr . 'wincmd w'
