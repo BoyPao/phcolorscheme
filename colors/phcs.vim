@@ -156,7 +156,7 @@ hi perlspecialmatch				guifg=#7097e0 guibg=#383838 guisp=#7097e0 gui=NONE ctermf
 "hi clear -- no settings --
 
 autocmd VimEnter /* call s:PHCSApplyEOLMatch()
-if version > 800
+if version >= 800
 	autocmd WinNew /* call s:PHCSApplyEOLMatch()
 endif
 
