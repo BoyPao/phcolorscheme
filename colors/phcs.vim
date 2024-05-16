@@ -63,7 +63,7 @@ hi PMenuThumb					guifg=#0a0a0a guibg=#a4a6a8 guisp=#a4a6a8 gui=NONE ctermfg=232
 hi Question						guifg=#ffcd00 guibg=NONE guisp=NONE gui=NONE ctermfg=220 ctermbg=NONE cterm=NONE
 hi QuickFixLine					guifg=#ffffff guibg=#7097e0 guisp=#7097e0 gui=NONE ctermfg=15 ctermbg=68 cterm=NONE
 hi Search						guifg=#ffffff guibg=#00668f guisp=#00668f gui=NONE ctermfg=15 ctermbg=24 cterm=NONE
-hi SpecialKey					guifg=#ab60ed guibg=NONE guisp=NONE gui=NONE ctermfg=135 ctermbg=NONE cterm=NONE
+hi SpecialKey						guifg=#7e7eae guibg=NONE guisp=NONE gui=NONE ctermfg=103 ctermbg=NONE cterm=NONE
 hi SpellBad						guifg=NONE guibg=#ce4e4e guisp=#ce4e4e gui=NONE ctermfg=NONE ctermbg=167 cterm=NONE
 "hi SpellCap -- no settings --
 "hi SpellLocal -- no settings --
